@@ -1,7 +1,7 @@
-##Functions 1
+## Functions 1
 
-exercise_1
-´´´c
+## exercise 1
+```c
 #include <string.h>
 #include <stdio.h>
 
@@ -20,10 +20,10 @@ int main (){
 	pro(w);
 	return 0;
 }
-´´´
+```
 
 
-exercise 2
+## exercise 2
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -41,7 +41,6 @@ int r;
 
 	return D;
 }
-
 int main (){
 	printf("Introduce the first word and then then the second one\n");
 	fgets(s1, 30, stdin);
@@ -53,7 +52,7 @@ int main (){
 }
 ```
 
-exercise 3
+## exercise 3
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -93,11 +92,39 @@ int main(){
 	}
 ```
 
-exercise 4
+## exercise 4
 ```c
+#include <stdio.h>
+#include <string.h>
+//program to know if a word is palindrome
+char w[30];
+char w1[30];
+char w2[30];
+int i;
+int j;
+
+int main(){
+
+fgets(w, 30, stdin);
+j = strlen(w) - 1; 
+for(i = 0; i <= strlen(w) - 1; i++){ //for to form the inverted variable
+	w1[j] = w[i];
+	w2[i] = w1[j];
+	j --;
+}
+if (w2 == w1){
+	printf("\nThe word is palindrome");
+}
+else{
+	printf("\nThe word is not palindrome");
+}
+
+printf("\n%s %s", w1, w2);
+return 0;
+}
 ```
 
-exercise 5
+## exercise 5
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -121,6 +148,4 @@ int main (){
 	fgets(s, 31, stdin);
 	pro(s);
 }
-	
-
 ```
